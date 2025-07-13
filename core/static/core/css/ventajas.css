@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    background-color: #555;
+}
+div {
+    margin: 10px;
+    color: black;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    font-size: 17px;
+    text-align: left;
+}
+iframe {
+    position: absolute;
+    top: 150px; 
+    left: 800px;
+}
+footer{
+    margin-top: 30px;
+    text-align: center;
+    background-color:#333;
+}
+.menu-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+}
+.menu-flex a:hover {
+    background-color: rgb(222, 239, 240);
+    border-radius: 5px;
+}
+.menu-flex a {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    background: #555;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+
+

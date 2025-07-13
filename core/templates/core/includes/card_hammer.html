@@ -1,0 +1,15 @@
+<section>
+    <h2> listado de martillos</h2>
+    {% if martillos %}
+    <h3> resultados de la busqueda para "{{query}}"</h3>
+    <ul>
+        {% for m in martillos %}
+            {%include "core/includes/hammer.html"%}
+            
+            <a href="{% url 'hammer_detail' id=m.id%}">Mostrar</a>
+        {% endfor %}   
+    </ul>
+    {%else%}
+        <p> no existe el martillo. <p>
+    {%endif%}
+</section>            

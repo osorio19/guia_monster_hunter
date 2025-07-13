@@ -1,0 +1,33 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'core/css/estilos.css' %}">
+    <link rel="icon" href="{% static 'core/img/Martillo.webp' %}">
+    <title>Info</title>
+</head>
+<body>
+<header>
+<main>
+    <nav class="menu-flex">
+        <a href='{% url "inicio" %}'>Inicio</a>
+        <a href='{% url "ventajas" %}'>Ventajas</a>
+        <a href='{% url "martillos" %}'>Martillos</a> 
+    </nav>
+</header>    
+<div class='marco'>
+    <h1>Informacion</h1>
+    <img src=href="{% static 'core/img/martilloinfo.webp' %}"alt="imagen representativa" 
+    width="200px" height="200px">
+    <p>El martillo es un arma conocida desde el primer Monster Hunter que utiliza pura fuerza bruta. Firme y resistente, no destaca por su alcance o movilidad, aunque es sorprendentemente fácil de manejar a pesar de su gran tamaño. Permite realizar varios ataques tales como golpe lateral, golpe descendente, golpe al mentón, etc. Además de la posibilidad de poder cargar ataques mientras se mueve. Sin embargo, el martillo carece de habilidades evasivas o defensivas sin contar la evasión básica. Se debe conocer bien el tiempo de cada movimiento para lograr un buen manejo del Martillo, cargar fuertes golpes y esquivar los ataques del enemigo son el objetivo principal para dominarlo. Por otra parte, los Martillos poseen gran variedad de atributos elementales. No es posible cortar colas con el martillo, pero fácilmente se puede aturdir o romper las partes de un monstruo.</p>
+    <p>El Martillo posee un afilado medio (sí, hay que afilarlo, y encima se afila el mango), pero algunos martillos pueden llegar al filo azul o morado. Además, al realizar los ataques de carga al máximo el arma no rebotará, el movimiento del ataque de carga dependerá de si se está o no en movimiento. Los conocidos ataques de golpe al mentón y "swing de golf" son útiles para aturdir a los monstruos.</p>
+    <p>La capacidad de aturdimiento del martillo es visible al golpear a un monstruo en la cabeza, indicado como rayos amarillos y estrellas. El monstruo caerá (inicialmente tras 10 golpes) con estrellas girando sobre su cabeza, indicando que está K.O. Este es el momento perfecto para atacar al monstruo o colocar</p>       
+</div>
+</main>
+<footer>
+    <p>&copy; 2025 Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>

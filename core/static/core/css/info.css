@@ -1,0 +1,48 @@
+body{
+    border-style: outset;
+    margin: 0;
+    background-color: rgba(8, 8, 8, 0.781);
+
+}
+img{
+    border-radius: 5px;
+}
+h4{
+    margin-bottom: 50px;
+}
+
+div {
+    color: beige;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    font-size: 17px;
+    text-align: center;
+    display: inline block;
+    margin-right: 150px;
+    margin-left: 150px;
+
+}
+.menu-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+}
+.menu-flex a:hover {
+    background-color: rgb(222, 239, 240);
+    border-radius: 5px;
+}
+.menu-flex a {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    background: #555;
+    border-radius: 4px;
+    text-decoration: none;
+}
+footer{
+    margin-top: 20px;
+    text-align: center;
+    background-color:#333;
+}
+

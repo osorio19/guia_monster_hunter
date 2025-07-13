@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>review</title>
+</head>
+<body>
+<main>
+<section class='post'>
+    <form method='post' action="{% url 'review_update' id=r.id %}">
+        <fieldset>
+            {% csrf_token %}
+            <label for="content">contenido:</label>
+            <textarea name="content" placeholder="contenido de reseña"required>{{r.content}}
+            </textarea>
+            <label for="hammer">Martillos:</label>
+            <select id="hammer" name="hammer">
+                <option value="">Seleccione un martillo</option>
+                    {% for hammer_obj in hammers%}
+                        <option value="{{ hammer_obj.id }}" {% if r.hammer and hammer_obj.id == r.hammer.id %} selected{% endif %}>{{hammer_obj.name_hammer}}</option>
+                    {% endfor %}
+            </select>
+            <button type="submit">Actualizar</button>
+        </fieldset>
+    </form>    
+    <a href='{% url "inicio" %}'>Inicio</a>
+</section>
+</main>
+<footer>
+    <p>&copy; 2025 Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>

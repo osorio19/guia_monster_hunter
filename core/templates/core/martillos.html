@@ -1,0 +1,34 @@
+{% extends "core/base.html" %}
+{% block title %}
+Martillos
+{% endblock title %}
+{% block content %}
+
+<section class='search' >
+    <h2>Buscar martillos</h2>
+    <form method="GET" action="{% url 'hammer_search' %}">
+        <input type="text" name="q" placeholder="buscar martillos..."
+        value="{{ query|default_if_none:''}}">
+        <button type="submint">Buscar</button>
+    </form>
+    <b>
+{% include "core/includes/card_hammer.html" %}
+<div class="pagination_es">
+    <span class="step-links">
+    {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number}}
+        {% if query %}&q={{ query }}{%endif%}"> anterior</a>
+    {%endif%}
+    </span> 
+
+    <span  class="current">
+        pagina {{ page_obj.number}} de {{page_obj.paginator.num_pages}}.
+    </span>    
+
+    {% if page_obj.has_next%}    
+        <a href="?page={{ page_obj.next_page_number}}
+        {% if query %}&q={{ query }}{%endif%}"> siguiente</a>
+    {%endif%}
+
+</div>
+{% endblock content %}

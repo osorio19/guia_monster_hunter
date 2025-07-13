@@ -1,0 +1,15 @@
+<section>
+    <h2> listado de reseñas</h2>
+    {% if reviews %}
+    <ul>
+        {% for r in reviews %}
+            {%include "core/includes/review.html"%}
+            
+            <a href="{% url 'review_detail' id=r.id%}">Mostrar</a>
+            <a href="{% url 'review_update' id=r.id%}">Actualizar</a>
+        {% endfor %}   
+    </ul>
+    {%else%}
+        <p> no existe el martillo. <p>
+    {%endif%}
+</section>            

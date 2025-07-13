@@ -1,0 +1,10 @@
+<section>
+    <h1>¿Seguro quieres borrar la reseña "{{r.content}}"?</h1>
+    <p>Esta accion no es reversible</p>
+
+    <form method="post" action="{% url 'review_delete' id=r.id %}">
+        {%csrf_token%}
+        <button type="submint" class='button_delete'> Si, borrar</button>
+        <a href="{% url 'review_detail' id=r.id %}">No, cancelar</a>
+    </form>
+</section>

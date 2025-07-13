@@ -1,0 +1,15 @@
+{% extends "core/base.html" %}
+{% block content  %}
+<section class='login-form-section'>
+    <form method='post' action ="{% url 'login'%}">
+        {% csrf_token %}
+        {{form.as_p}}
+        {% if error_message %}
+            <p style="color: red;">{{error_message}}</p>
+        {%endif%}
+        <button type='submit'>Iniciar sesion</button>
+    </form>
+    <p>
+        ¿No tienes cuenta? <a href="{% url 'inicio' %}"> Registrate ahora</a>
+    </p>
+{% endblock  %}

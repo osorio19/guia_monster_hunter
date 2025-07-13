@@ -1,0 +1,49 @@
+{% extends "core/base.html" %}
+{% block title %}
+Martillo hace bonk
+{% endblock title %}
+{% block title_page %}
+<h1>Monster Hunter World</h1>
+{% endblock  %}
+{% block content %}
+<div class>
+
+    <p>Pagina dedica a una de las mejores armas desde mi experencia en el Monster Hunter World Iceborne, mas
+    conocida como el martillo a continuacion les dejo una lista de sus combos, 
+    cosas que se pueden hacer con el arma para que se hagan una idea </p>
+    
+    <h2>Combos:</h2>
+    <ul>
+        <li>Combo estándar 1 - Golpe descendente I: Triángulo / Y 2 - Golpe descendente II: Triángulo / Y 3 - Volteo: Triángulo / Y </li> 
+        <li>Combo desde nivel de carga 1 1 - Golpe lateral cargado: Soltar R2 / RT 2 - Continuación cargada: Triángulo / Y 3 - Golpe descendente I: Triángulo / Y </li>   
+        <li>Combo desde nivel de carga 2 1 - Ataque cargado II: Soltar R2 / RT 2 - Golpe lateral: Triángulo / Y 3 - Golpe descendente II: Triángulo / Y </li> 
+        <li>Continuaciones de machaque giratorio (suelta R2/RT con carga nv. 3, moviéndote) 1 - Cargar: R2 / RT 2 - Machaque giratorio: Soltar R2 / RT 3a - Golpe lateral giratorio: Primer giro Triángulo / Y 3b - Continuación giratoria: 2.º a 3er giro Triángulo / Y 3c - Volteo fuerte giratorio: 4.º a 5.º giro Triángulo / Y</li>
+    </ul>
+    <h3>Acciones:</h3>
+    <ol>
+        <li>Almacenar carga Almacenar carga te permite aumentar el poder de tus ataques y de los ataques cargados. El efecto persiste hasta que guardes el martillo o recibas daño. </li>  
+        <li>Aturdir monstruos Se pede aturdir más fácilmente al golpear la cabeza del monstruo con volteo cargado y uppercut brutal cargado.</li>
+        <li>Carga deslizante Suelta R2/RT durante una carga deslizante para lanzar giros aéreos, o encadénalo con otros movimientos pulsando los botones de ataque.</li>
+    </ol>
+    </div>
+    {%include 'core/includes/card_review.html' %}
+    <a class='boton' href='{% url "inicio" %}'>Inicio</a>
+    <a class= 'boton' href='{% url "review_create" %}'>Crear reseña</a>
+    <div class="pagination">
+        <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page={{ page_obj.previous_page_number}}
+            {% if query %}&q={{ query }}{%endif%}"> anterior</a>
+        {%endif%}
+        </span> 
+    
+        <span  class="current">
+            pagina {{ page_obj.number}} de {{page_obj.paginator.num_pages}}.
+        </span>    
+    
+        {% if page_obj.has_next%}    
+            <a href="?page={{ page_obj.next_page_number}}
+            {% if query %}&q={{ query }}{%endif%}"> siguiente</a>
+        {%endif%}
+    
+{% endblock content %}

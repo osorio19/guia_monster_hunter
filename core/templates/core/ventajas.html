@@ -1,0 +1,41 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'core/css/estilos.css' %}">
+    <link rel="icon" href="{% static 'core/img/images.png' %}">
+    <title>Ventajas</title>
+</head>
+<body>
+<header>
+<main>
+    <nav class="menu-flex">
+        <a href='{% url "inicio" %}'>Inicio</a>
+        <a href='{% url "info" %}'>Info</a>
+        <a href='{% url "martillos" %}'>Martillos</a>
+    </nav>
+</header>
+<div >
+    <h1>Ventajas y Desventajas</h1>
+    <ul>
+        <h2>Ventajas:</h2>
+        <li>Gran poder de ataque, es un arma con demasiado daño</li>
+        <li>Facil de usar</li>
+        <li>Poderosos ataques cargados</li>
+        <li>La capacidad de  aturdimiento</li>
+        <li>Buena para romper partes.</li>
+        <h3>Desventajas:</h3>
+        <li>Su poco alcance</li>
+        <li>Cuenta con muy poco daño elemental</li>
+        <li>Pierde mucha resistencia al hacer ataques cargados</li>
+    </ul>    
+    <iframe width="500" height="350" src="https://www.youtube.com/embed/955yWtPw9Fk" title="¡Descubre por qué el Martillo es la ARMA DEFINITIVA en MHW Iceborne!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</main>
+<footer>
+    <p>&copy; 2025 Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>
